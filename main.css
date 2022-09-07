@@ -12,7 +12,7 @@ body {
 }
 
 #logo {
-    width: 25%;
+    width: 28%;
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
@@ -20,7 +20,6 @@ body {
 
 #logo img {
     width: 250px;
-    margin-left: 20px;
 }
 
 .topnav {
@@ -29,16 +28,17 @@ body {
     width: 100vw;
     display: flex;
     position: fixed;
-    top: 0;
+    padding-top: 0.8em;
 }
 
 .topnav a {
     text-align: center;
     background-color: transparent;
-    padding: 20px;
-    font-size: 12px;
+    padding: 17px;
+    font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    flex-wrap: nowrap;
 }
 
 .topnav a:hover {
@@ -46,22 +46,33 @@ body {
 }
 
 #navlinks1 {
-    width: 45%;
+    width: 38%;
+    min-width: 800px;
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#navlinks1 a {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 #navlinks2 {
-    width: 25%;
+    width: 28%;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: nowrap;
 }
-
 #page1content, #page2content, #page3content, #page4content, #page5content  {
-    padding-top: 55vh;
-    margin-left: 15vw;
+    padding-top: 65vh;
+    margin-left: 16vw;
     font-size: 50px;
     text-transform: uppercase;
+}
+
+#page2line1, #page3line1 {
+    font-size: 20px;
 }
 
 button {
@@ -74,9 +85,12 @@ button {
 
 #navbarbutton {
     border-color: transparent;
-    font-size: 20px;
-    padding: 10px;
     width: 10px;
+}
+
+#navbarbuttonlogo {
+    width: 15px;
+    padding-bottom: 4px;
 }
 
 footer {
@@ -86,15 +100,18 @@ footer {
     padding: 5px;
     align-items: center;
     text-transform: uppercase;
-    font-size: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: 12px;
+    padding: 50px 0;
 }
 
 footer a {
-    padding: 10px;
-    font-size: 10px;
+    padding: 0 21px;
+    font-size: 12px;
     text-decoration: none;
+}
+
+footer p {
+    padding-right: 10px;
 }
 
 #page1, #page2, #page3, #page4, #page5 {
