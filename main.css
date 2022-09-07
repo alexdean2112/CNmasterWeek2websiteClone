@@ -35,9 +35,9 @@ body {
 .topnav a {
     text-align: center;
     background-color: transparent;
-    padding-bottom: 4px;
-    margin: 0 17px;
-    font-size: 13px;
+    padding: 10px 0px 4px 0px;
+    margin: 0px 19px;
+    font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
     flex-wrap: nowrap;
@@ -78,8 +78,36 @@ body {
     align-items: center;
 }
 
-#page1content, #page2content, #page3content, #page4content, #page5content  {
+#page1content {
     padding-top: 65vh;
+    margin-left: 16vw;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+#page2content {
+    padding-top: 70vh;
+    margin-left: 16vw;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#page3content {
+    padding-top: 65vh;
+    margin-left: 16vw;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#page4content {
+    padding-top: 70vh;
+    margin-left: 16vw;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#page5content {
+    padding-top: 60vh;
     margin-left: 16vw;
     font-size: 50px;
     text-transform: uppercase;
@@ -113,7 +141,7 @@ button {
 
 #navbarbuttonlogo {
     width: 15px;
-    padding-bottom: 4px;
+    padding: 10px 0px 4px 0px;
 }
 
 footer {
