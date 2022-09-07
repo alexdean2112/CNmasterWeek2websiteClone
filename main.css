@@ -20,6 +20,7 @@ body {
 
 #logo img {
     width: 250px;
+    z-index: 9;
 }
 
 .topnav {
@@ -34,15 +35,33 @@ body {
 .topnav a {
     text-align: center;
     background-color: transparent;
-    padding: 17px;
+    padding-bottom: 4px;
+    margin: 0 17px;
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
     flex-wrap: nowrap;
+    display: inline-block;
+    position: relative;
+    color: #fff;
 }
 
-.topnav a:hover {
-    text-decoration: underline;
+.topnav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.topnav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 #navlinks1 {
@@ -50,20 +69,15 @@ body {
     min-width: 800px;
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-}
-
-#navlinks1 a {
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 #navlinks2 {
     width: 28%;
     display: flex;
     justify-content: flex-end;
-    flex-wrap: nowrap;
+    align-items: center;
 }
+
 #page1content, #page2content, #page3content, #page4content, #page5content  {
     padding-top: 65vh;
     margin-left: 16vw;
@@ -78,9 +92,18 @@ body {
 button {
     background-color: transparent;
     font-size: 20px;
-    padding: 13px;
+    padding: 10px;
     width: 170px;
+    height: 50px;
     border-color: white;
+    font-size: 15px;
+    position: relative;
+    transition-duration: 1s;
+}
+
+.pagebutton:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 #navbarbutton {
@@ -108,6 +131,11 @@ footer a {
     padding: 0 21px;
     font-size: 12px;
     text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+footer a:hover {
+    color: grey;
 }
 
 footer p {
