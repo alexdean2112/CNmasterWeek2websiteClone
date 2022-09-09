@@ -71,6 +71,15 @@ body {
     justify-content: center;
 }
 
+@media screen and (max-width: 1200px) {
+    #navlinks1 {
+        display: none;
+    }
+    .topnav {
+        justify-content: space-evenly;
+    }
+}
+
 #navlinks2 {
     width: 28%;
     display: flex;
