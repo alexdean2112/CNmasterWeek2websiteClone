@@ -1,3 +1,5 @@
+/* general css */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
@@ -20,8 +22,9 @@ body {
 
 #logo img {
     width: 250px;
-    z-index: 9;
 }
+
+/* top navigation bar */
 
 .topnav {
     background-color: transparent;
@@ -40,8 +43,7 @@ body {
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
-    flex-wrap: nowrap;
-    display: inline-block;
+    display: inline;
     position: relative;
     color: #fff;
 }
@@ -71,21 +73,26 @@ body {
     justify-content: center;
 }
 
-@media screen and (max-width: 1200px) {
-    #navlinks1 {
-        display: none;
-    }
-    .topnav {
-        justify-content: space-evenly;
-    }
-}
-
 #navlinks2 {
-    width: 26%;
+    width: 28%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 1.5em;
 }
+
+#navbarbutton {
+    border-color: transparent;
+    width: 25px;
+    background-color: transparent;
+}
+
+#navbarbuttonlogo {
+    width: 15px;
+    padding: 10px 0px 4px 0px;
+}
+
+/* page content */
 
 #page1content {
     padding-top: 65vh;
@@ -126,7 +133,9 @@ body {
     font-size: 20px;
 }
 
-#button-container1, #button-container2, #button-container3, #button-container4, #button-container5 {
+/* page buttons */
+
+.buttoncontainer {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -140,7 +149,7 @@ body {
     cursor: pointer;
 }
 
-#button-overlay1, #button-overlay2, #button-overlay3, #button-overlay4, #button-overlay5 {
+.buttonoverlay {
     position: absolute;
     height: 47px;
     width: 165px;
@@ -150,70 +159,28 @@ body {
     transition: transform 0.4s;
 }
 
-#text1, #text2, #text3, #text4, #text5 {
+.text {
     z-index: 1;
     color: white;
     transition: color 0.4s;
     font-size: 15px;
 }
 
-#button-container1:hover #button-overlay1 {
+.buttoncontainer:hover .buttonoverlay {
     transform: scaleY(1);
     transform-origin: bottom;
 }
 
-#button-container2:hover #button-overlay2 {
-    transform: scaleY(1);
-    transform-origin: bottom;
-}
-
-#button-container3:hover #button-overlay3 {
-    transform: scaleY(1);
-    transform-origin: bottom;
-}
-
-#button-container4:hover #button-overlay4 {
-    transform: scaleY(1);
-    transform-origin: bottom;
-}
-
-#button-container5:hover #button-overlay5 {
-    transform: scaleY(1);
-    transform-origin: bottom;
-}
-
-#button-container1:hover #text1 {
-    color: black;
-}
-#button-container2:hover #text2 {
-    color: black;
-}
-#button-container3:hover #text3 {
-    color: black;
-}
-#button-container4:hover #text4 {
-    color: black;
-}
-#button-container5:hover #text5 {
+.buttoncontainer:hover .text {
     color: black;
 }
 
-#navbarbutton {
-    border-color: transparent;
-    width: 10px;
-    background-color: transparent;
-}
-
-#navbarbuttonlogo {
-    width: 15px;
-    padding: 10px 0px 4px 0px;
-}
+/* footer */
 
 footer {
     display: flex;
     justify-content: center;
     background-color: black;
-    padding: 5px;
     align-items: center;
     text-transform: uppercase;
     font-size: 12px;
@@ -232,8 +199,10 @@ footer a:hover {
 }
 
 footer p {
-    padding-right: 10px;
+    padding-right: 15px;
 }
+
+/* background of pages */
 
 #page1, #page2, #page3, #page4, #page5 {
     height: 100vh;
@@ -259,4 +228,15 @@ footer p {
 
 #page5 {
     background-image: url(./images/rocket5.jpg);
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+    #navlinks1 {
+        display: none;
+    }
+    .topnav {
+        justify-content: space-evenly;
+    }
 }
